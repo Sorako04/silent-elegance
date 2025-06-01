@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Ảnh - Silent Elegance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        .gallery-page {
+            padding-top: 0;
+            background-color: var(--dark-bg);
+            min-height: 100vh;
+        }
+
+        .gallery-hero {
+            background-color: var(--navy-color);
+            background-image: url('images/hero/gallery-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 10rem 5% 8rem;
+            text-align: center;
+            margin-top: 0;
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(35, 56, 66, 0.7), rgba(35, 56, 66, 0.9));
+            z-index: 1;
+        }
+
+        .gallery-hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .gallery-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--cream-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-hero .tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--cream-color);
+            background-color: rgba(35, 56, 66, 0.8);
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 1rem auto;
+            border: 1px solid transparent;
+            line-height: 1.6;
+            max-width: 80%;
+            backdrop-filter: blur(5px);
+        }
+
+        .image-grid {
+            width: var(--content-width);
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .grid-item {
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 992px) {
+            .image-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .gallery-hero {
+                padding: 6rem 5%;
+                min-height: 50vh;
+                background-attachment: scroll;
+            }
+
+            .gallery-hero .tagline {
+                padding: 1rem 1.5rem;
+                max-width: 90%;
+            }
+
+            .image-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery-hero {
+                padding: 4rem 5%;
+                min-height: 40vh;
+            }
+
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+            }
+        }
+
+        /* Footer styles */
+        footer {
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
+            background-color: #f4ebdd;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            width: var(--content-width);
+            margin: 0 auto;
+            padding: 2rem 0;
+            color: #233842;
+        }
+
+        .footer-section h3 {
+            color: #233842;
+        }
+
+        .footer-section p {
+            color: #233842;
+        }
+
+        .footer-section ul li a {
+            color: #233842;
+        }
+
+        .social-links a {
+            color: #233842;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            background-color: #f4ebdd;
+            padding: 1rem 0;
+            text-align: center;
+            color: #233842;
+        }
+
+        .footer-bottom .section-divider {
+            background-color: #233842;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Silent Elegance Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li class="dropdown">
+                    <a href="collections.html">Bộ Sưu Tập</a>
+                    <ul class="dropdown-content">
+                        <li><a href="collections/ao-cham.html">Áo Chàm</a></li>
+                        <li><a href="collections/ao-dai-cach-tan.html">Áo Dài Cách Tân</a></li>
+                        <li><a href="collections/ao-giao-linh.html">Áo Giao lĩnh – Viên lĩnh – Đối khâm</a></li>
+                        <li><a href="collections/ao-ngu-than.html">Áo Ngũ Thân Tay Chẽn - Áo Tấc</a></li>
+                        <li><a href="collections/phu-kien.html">Phụ Kiện Trang Phục</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Về Chúng Tôi</a></li>
+                <li><a href="gallery.html">Thư Viện Ảnh</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm bộ sưu tập...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <section class="gallery-hero">
+            <h1>Thư Viện Ảnh</h1>
+            <p class="tagline">Khám phá bộ sưu tập hình ảnh về trang phục truyền thống Việt Nam qua góc nhìn nghệ thuật</p>
+            <div class="section-divider"></div>
+        </section>
+
+        <div class="image-grid">
+            <div class="grid-item"><img src="images/gallery/img1.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img2.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img3.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img4.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img5.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img6.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img7.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img8.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img9.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img10.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img11.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img12.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img13.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img14.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img15.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img16.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img17.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img18.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img19.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img20.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img21.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img22.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img23.jpg" alt="Traditional Clothing"></div>
+            <div class="grid-item"><img src="images/gallery/img24.jpg" alt="Traditional Clothing"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Địa Chỉ</h3>
+                <p>54 Chùa Láng, Láng Thượng</p>
+                <p>Đống Đa, Hà Nội, 11512</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kết Nối</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/silentelegance" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>Hotline: 038.699.2402</p>
+                <p>Email: silentelegance@gmail.com</p>
+                <p>Giờ mở cửa: 08:00 - 19:00 hàng ngày</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-divider"></div>
+            <p>&copy; 2025 Silent Elegance | Designed by <a href="https://liminova.net" target="_blank" style="color: inherit; text-decoration: underline;">Liminova</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

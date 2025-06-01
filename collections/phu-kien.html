@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phụ Kiện Trang Phục Thời Lý – Trần - Silent Elegance</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/collection.css">
+    <style>
+        .collection-hero {
+            background-color: var(--cream-color);
+            padding: 4rem 5%;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .collection-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+        }
+
+        .collection-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .collection-description {
+            text-align: justify;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .collection-description p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .accessories-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--white-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .accessories-section h2 {
+            color: var(--primary-color);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            word-wrap: break-word;
+        }
+
+        .accessories-section p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            line-height: 1.6;
+            color: #233842 !important;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        .accessories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .accessory-card {
+            width: 100%;
+            background: var(--white-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .accessory-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .accessory-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .accessory-info {
+            padding: 1.25rem;
+        }
+
+        .accessory-info h3 {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .accessory-info p {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            color: #233842 !important;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .price {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .rent-button {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .rent-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsive navigation styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--white-color);
+                padding: 1rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: block;
+            }
+
+            .nav-links li {
+                display: block;
+                margin: 1rem 0;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                padding-left: 1rem;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            .search-bar input {
+                width: calc(100% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .collection-hero {
+                padding: 3rem 1rem;
+                margin-top: 60px;
+            }
+
+            .collection-content {
+                padding: 0 0.5rem;
+            }
+
+            .accessories-section {
+                padding: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .collection-hero {
+                padding: 2rem 1rem;
+            }
+
+            .accessories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accessory-card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Silent Elegance Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Trang Chủ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Bộ Sưu Tập</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ao-cham.html">Áo Chàm</a></li>
+                        <li><a href="ao-dai-cach-tan.html">Áo Dài Cách Tân</a></li>
+                        <li><a href="ao-giao-linh.html">Áo Giao lĩnh – Viên lĩnh – Đối khâm</a></li>
+                        <li><a href="ao-ngu-than.html">Áo Ngũ Thân Tay Chẽn - Áo Tấc</a></li>
+                        <li><a href="phu-kien.html" class="active">Phụ Kiện Trang Phục</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#about">Về Chúng Tôi</a></li>
+                <li><a href="../index.html#gallery">Thư Viện Ảnh</a></li>
+                <li><a href="../index.html#contact">Liên Hệ</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm bộ sưu tập...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="collection-hero">
+            <h1>Phụ Kiện Trang Phục</h1>
+            <div class="section-divider"></div>
+        </section>
+
+        <section class="collection-content">
+            <div class="collection-description">
+                <p>Tại Silent Elegance – Nơi phục trang kể lại những giá trị ngàn năm.</p>
+                <p>Ở Việt Nam thời trung đại, đặc biệt là dưới các triều đại Lý và Trần, phục sức không đơn thuần chỉ để mặc – đó là ngôn ngữ thị giác của quyền uy, đạo đức, niềm tin và văn hóa. Phụ kiện trong cổ phục là minh chứng sống động cho hệ tư tưởng tam giáo đồng hành – Nho giáo định vị trật tự xã hội, Phật giáo dưỡng tâm linh và Đạo giáo gợi mở sự siêu thoát.</p>
+                <p>Tại Silent Elegance, chúng tôi không chỉ cung cấp cổ phục để bạn mặc đẹp, mà còn mang đến một không gian trải nghiệm đậm chất sử học và thẩm mỹ. Những bộ phụ kiện được phục dựng từ tư liệu khảo cổ, thư tịch cổ và các mô tả từ bia đá, tượng chùa, tranh vẽ thời Lý – Trần.</p>
+            </div>
+
+            <div class="accessories-section">
+                <h2>1. Khăn mũ: Biểu tượng địa vị và thần thái cung đình</h2>
+                <p>Đối với người xưa, "đầu đội trời" không chỉ là hình ảnh ẩn dụ – mà là một nghi lễ sống. Khăn vấn, mũ đô cân, mũ phốc đầu là biểu tượng của sự chỉnh tề, của người có học, có đạo. Nam giới thời Lý – Trần khi bước vào đình, chùa hay triều đình đều phải vấn khăn hoặc đội mũ – không chỉ để thể hiện lễ độ mà còn là hình thức "trang nghiêm hóa tâm trí".</p>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <img src="../images/collections/phu-kien/khan-dong-1.jpg" alt="Khăn Đóng Truyền Thống">
+                        <div class="accessory-info">
+                            <h3>Khăn Đóng Truyền Thống</h3>
+                            <p>Được nghiên cứu từ tượng quan chùa Phật Tích</p>
+                            <div class="price">Giá thuê: 30.000đ/ngày</div>
+                            <a href="../contact.html" class="rent-button">Đặt Thuê Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accessories-section">
+                <h2>2. Trâm cài, hoa tai và trang sức</h2>
+                <p>Khác với những giai đoạn sau chịu ảnh hưởng mạnh từ Hán học, trang sức thời Lý – Trần mang đặc trưng vị linh – thanh tịnh – cát tường. Trâm cài tóc hình chim phượng, lá đề, hoa sen... không chỉ đẹp mà còn mang biểu tượng Phật giáo.</p>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <img src="../images/collections/phu-kien/trang-suc-1.jpg" alt="Trâm Cài Hoa Sen">
+                        <div class="accessory-info">
+                            <h3>Trâm Cài Hoa Sen</h3>
+                            <p>Biểu tượng của sự thanh cao và tinh khiết</p>
+                            <div class="price">Giá thuê: 30.000đ/ngày</div>
+                            <a href="../contact.html" class="rent-button">Đặt Thuê Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accessories-section">
+                <h2>3. Thắt lưng và đai ngọc</h2>
+                <p>Trang phục thời Lý – Trần dùng dây buộc thay cho khuy, và chính vì thế, đai lưng trở thành chi tiết then chốt – không chỉ định hình dáng áo mà còn "giữ nếp người". Đai không chỉ ôm dáng – mà còn chia người theo giai tầng.</p>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <img src="../images/collections/phu-kien/that-lung-1.jpg" alt="Thắt Lưng Truyền Thống">
+                        <div class="accessory-info">
+                            <h3>Thắt Lưng Truyền Thống</h3>
+                            <p>Thiết kế theo phong cách quý tộc thời Lý-Trần</p>
+                            <div class="price">Giá thuê: 20.000đ/ngày</div>
+                            <a href="../contact.html" class="rent-button">Đặt Thuê Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accessories-section">
+                <h2>4. Hài thêu</h2>
+                <p>Trong nhã nhạc cung đình, có câu "nghiêng mình mà bước, không động tiếng hài". Dáng đi thời Lý – Trần được huấn luyện để giữ cho thân đoan, tâm định. Các mẫu hài tại Silent Elegance được may bằng gấm hoa nhập, phần mũi uốn cong nhẹ theo đúng kiểu Lý – Trần.</p>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <img src="../images/collections/phu-kien/hai-1.jpg" alt="Hài Thêu Truyền Thống">
+                        <div class="accessory-info">
+                            <h3>Hài Thêu Truyền Thống</h3>
+                            <p>Thiết kế theo phong cách cung đình thời Lý-Trần</p>
+                            <div class="price">Giá thuê: 30.000đ/ngày</div>
+                            <a href="../contact.html" class="rent-button">Đặt Thuê Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accessories-section">
+                <h2>5. Túi thơm, ngọc bội, phù ấn và vật đeo phụ</h2>
+                <p>Trong văn hóa Việt cổ, người ta tin rằng hương thơm có thể dưỡng tâm, xua tà và mời gọi điềm lành. Túi thơm đeo bên hông được may từ vải gấm, thêu tay các họa tiết linh vật như cá chép, sen, lân, hoặc chữ Hán mang ý nghĩa như "Phúc", "Lộc", "Thọ".</p>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <img src="../images/collections/phu-kien/tui-thom-1.jpg" alt="Túi Thơm Truyền Thống">
+                        <div class="accessory-info">
+                            <h3>Túi Thơm Truyền Thống</h3>
+                            <p>Thêu tay họa tiết truyền thống</p>
+                            <div class="price">Giá thuê: 20.000đ/ngày</div>
+                            <a href="../contact.html" class="rent-button">Đặt Thuê Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collection-description">
+                <p>Silent Elegance không chỉ là một shop cổ phục. Chúng tôi là một "cánh cổng thời gian" – nơi bạn không đơn thuần mặc trang phục cổ, mà còn sống trong tinh thần của quá khứ. Mỗi món phụ kiện tại đây là một lát cắt văn hóa – được chúng tôi gìn giữ, phục dựng và trao lại để bạn tiếp nối.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Địa Chỉ</h3>
+                <p>91 Chùa Láng, Láng Thượng</p>
+                <p>Đống Đa, Hà Nội 11512</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kết Nối</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/silentelegance" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Giờ Mở Cửa</h3>
+                <p>08:00 – 19:00</p>
+                <p>Mở cửa mỗi ngày</p>
+                <p>Hotline: 0386992402</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-divider"></div>
+            <p>&copy; 2024 Silent Elegance. Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

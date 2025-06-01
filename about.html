@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Về Chúng Tôi - Silent Elegance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --content-width: min(95%, 1600px);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .collection-hero,
+        .about-hero {
+            width: 100%;
+            max-width: 100vw;
+            padding: 6rem 2.5%;
+            margin-top: 80px;
+            box-sizing: border-box;
+        }
+
+        .about-content,
+        .collection-content {
+            width: var(--content-width);
+            margin: 4rem auto;
+            box-sizing: border-box;
+        }
+
+        .about-section,
+        .rules-section {
+            width: 100%;
+            max-width: 100vw;
+            margin: 4rem auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .about-section img,
+        .rules-section img {
+            width: 100%;
+            height: auto;
+            max-width: 1600px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Add specific styles for these images */
+        img[src="images/about/ve-silent-elegance.jpg"],
+        img[src="images/rules/quy-dinh-thue.jpg"] {
+            max-width: 2000px; /* Even bigger for these specific images */
+            width: 100%;
+            height: auto;
+            margin: 2rem auto;
+        }
+
+        .pricing-section {
+            width: 100%;
+            max-width: 100vw;
+            padding: 4rem 2.5%;
+            box-sizing: border-box;
+        }
+
+        .pricing-content {
+            width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .pricing-image {
+            width: 100%;
+            height: auto;
+            max-width: 1400px;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: rgba(35, 56, 66, 0.8);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            margin: 4rem 0;
+        }
+
+        .contact-info h2 {
+            color: var(--cream-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--cream-color);
+            font-size: 1.1rem;
+        }
+
+        .contact-info i {
+            width: 24px;
+            margin-right: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info a {
+            color: var(--cream-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 2rem auto 0;
+            text-align: center;
+            background-color: var(--secondary-color);
+            color: var(--cream-color);
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-info .cta-button:hover {
+            background-color: #ff8b77;
+        }
+
+        .footer-content {
+            width: var(--content-width);
+            margin: 0 auto;
+            padding: 2rem 0;
+            color: #233842;
+        }
+
+        .footer-section h3 {
+            color: #233842;
+        }
+
+        .footer-section p {
+            color: #233842;
+        }
+
+        .social-links a {
+            color: #233842;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            background-color: #f4ebdd;
+            padding: 1rem 0;
+            text-align: center;
+            color: #233842;
+        }
+
+        .footer-bottom .section-divider {
+            background-color: #233842;
+            opacity: 0.2;
+        }
+
+        @media screen and (max-width: 768px) {
+            :root {
+                --content-width: 98%;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-section,
+            .pricing-section,
+            .rules-section {
+                padding: 2rem 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+
+            .about-section img,
+            .rules-section img {
+                border-radius: 8px;
+            }
+
+            .about-section,
+            .rules-section {
+                margin: 2rem auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .about-section,
+            .pricing-section,
+            .rules-section {
+                padding: 1.5rem 0.5rem;
+            }
+        }
+
+        .about-hero {
+            background-color: var(--navy-color);
+            background-image: url('images/hero/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 10rem 5% 8rem;
+            text-align: center;
+            margin-top: 0;
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(35, 56, 66, 0.7), rgba(35, 56, 66, 0.9));
+            z-index: 1;
+        }
+
+        .about-hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--cream-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-hero .tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--cream-color);
+            background-color: rgba(35, 56, 66, 0.8);
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 1rem auto;
+            border: 1px solid transparent;
+            line-height: 1.6;
+            max-width: 80%;
+            backdrop-filter: blur(5px);
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            margin: 2rem auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-hero {
+                padding: 6rem 5%;
+                min-height: 50vh;
+                background-attachment: scroll;
+            }
+
+            .about-hero .tagline {
+                padding: 1rem 1.5rem;
+                max-width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-hero {
+                padding: 4rem 5%;
+                min-height: 40vh;
+            }
+        }
+
+        .about-section {
+            margin-bottom: 4rem;
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        @media screen and (max-width: 992px) {
+            .about-image img {
+                height: 500px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-image img {
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-image img {
+                height: 300px;
+            }
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Fix white outlines */
+        .about-section,
+        .rules-section,
+        .pricing-section {
+            margin: 3rem auto;
+            padding: 3rem 2%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .pricing-content {
+            background-color: transparent;
+        }
+
+        .pricing-content h2 {
+            color: var(--cream-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Adjust section spacing */
+        .about-content {
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        @media screen and (max-width: 992px) {
+            .about-section img,
+            .rules-section img,
+            .pricing-image {
+                max-width: 100%;
+            }
+        }
+
+        .text-content {
+            color: var(--cream-color);
+            width: 98%;
+            margin: 0 auto;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .text-content h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .about-section,
+        .rules-section,
+        .pricing-section {
+            margin: 3rem auto;
+            padding: 3rem 2%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .feature h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: var(--cream-color);
+        }
+
+        .rules-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .rule-group {
+            padding: 1rem 0;
+        }
+
+        .rule-group h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .rule-group ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .rule-group ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            color: var(--cream-color);
+        }
+
+        .pricing-card {
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            color: var(--cream-color);
+            position: relative;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card h3 {
+            color: #ff9d8d;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .pricing-card .price {
+            color: var(--cream-color);
+            font-size: 1.5rem;
+            margin: 0.5rem 0 1rem 0;
+            text-align: center;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            color: var(--cream-color);
+        }
+
+        @media screen and (max-width: 1200px) {
+            .text-content {
+                padding: 2rem 0;
+                width: 95%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .text-content {
+                padding: 1rem 0;
+                width: 95%;
+            }
+
+            .feature-list,
+            .rules-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .text-content h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background-color: rgba(35, 56, 66, 0.7);
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 
+                       0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card h3 {
+            color: #ff9d8d;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .pricing-card .price {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0.5rem 0 1rem 0;
+            text-align: center;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        .pricing-card ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 1400px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-card {
+                padding: 2rem;
+            }
+            .pricing-card h3 {
+                font-size: 1.6rem;
+            }
+            .pricing-card ul li {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .pricing-section .text-content {
+                padding: 2rem;
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .pricing-card {
+                padding: 1.5rem;
+            }
+            .pricing-card h3 {
+                font-size: 1.4rem;
+            }
+            .pricing-card .price {
+                font-size: 1.3rem;
+            }
+            .pricing-card ul li {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer styles */
+        footer {
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
+            background-color: #f4ebdd;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            width: var(--content-width);
+            margin: 0 auto;
+            padding: 2rem 0;
+            color: #233842;
+        }
+
+        .footer-section h3 {
+            color: #233842;
+        }
+
+        .footer-section p {
+            color: #233842;
+        }
+
+        .social-links a {
+            color: #233842;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            background-color: #f4ebdd;
+            padding: 1rem 0;
+            text-align: center;
+            color: #233842;
+        }
+
+        .footer-bottom .section-divider {
+            background-color: #233842;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-background"></div>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Silent Elegance Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li class="dropdown">
+                    <a href="collections.html">Bộ Sưu Tập</a>
+                    <ul class="dropdown-content">
+                        <li><a href="collections/ao-cham.html">Áo Chàm</a></li>
+                        <li><a href="collections/ao-dai-cach-tan.html">Áo Dài Cách Tân</a></li>
+                        <li><a href="collections/ao-giao-linh.html">Áo Giao lĩnh – Viên lĩnh – Đối khâm</a></li>
+                        <li><a href="collections/ao-ngu-than.html">Áo Ngũ Thân Tay Chẽn - Áo Tấc</a></li>
+                        <li><a href="collections/phu-kien.html">Phụ Kiện Trang Phục</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="active">Về Chúng Tôi</a></li>
+                <li><a href="gallery.html">Thư Viện Ảnh</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm bộ sưu tập...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <h1>Về Chúng Tôi</h1>
+            <p class="tagline">Khám phá câu chuyện về di sản và sự khéo léo trong nghề thủ công tại Silent Elegance</p>
+            <div class="section-divider"></div>
+        </section>
+
+        <section class="about-content">
+            <div class="about-section">
+                <div class="text-content">
+                    <h2>Về Silent Elegance</h2>
+                    <p>Silent Elegance là điểm đến lý tưởng cho những ai yêu thích và muốn trải nghiệm vẻ đẹp của trang phục truyền thống Việt Nam. Chúng tôi tự hào mang đến cho quý khách:</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature">
+                            <h3>Đa Dạng Trang Phục</h3>
+                            <p>Bộ sưu tập phong phú từ áo dài truyền thống đến các trang phục cổ phục Việt Nam như áo ngũ thân, áo chàm, áo giao lĩnh.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <h3>Chất Lượng Cao Cấp</h3>
+                            <p>Tất cả trang phục được may từ chất liệu cao cấp, tỉ mỉ trong từng đường kim mũi chỉ.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <h3>Dịch Vụ Chuyên Nghiệp</h3>
+                            <p>Đội ngũ nhân viên nhiệt tình, am hiểu sâu sắc về trang phục truyền thống, sẵn sàng tư vấn chi tiết.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <h3>Trải Nghiệm Trọn Vẹn</h3>
+                            <p>Không gian studio thiết kế tinh tế, phù hợp để ghi lại những khoảnh khắc đẹp trong trang phục truyền thống.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-section">
+                <div class="text-content">
+                    <h2>Silent Elegance - Bảng giá cho thuê</h2>
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Giao lĩnh/Viên lĩnh<br>(Set 3 món)</h3>
+                            <p class="price">Giá 200.000đ</p>
+                            <ul>
+                                <li>- 1 quần trắng tròn</li>
+                                <li>- 1 xiêm (thường) dài</li>
+                                <li>- 1 giáo Giao lĩnh</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <h3>Giao lĩnh/Viên lĩnh<br>(Set 5 món)</h3>
+                            <p class="price">Giá 250.000đ</p>
+                            <ul>
+                                <li>- 1 váy thụng</li>
+                                <li>- 1 áo Viên lĩnh</li>
+                                <li>- 1 áo Giao lĩnh</li>
+                                <li>- 1 xiêm (thường) ngắn</li>
+                                <li>- 1 Đối khâm</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Áo Ngũ thân tay<br>chèn 1 lớp</h3>
+                            <p class="price">Giá 80.000đ</p>
+                            <ul>
+                                <li>- 1 quần trắng/đen tròn</li>
+                                <li>- 1 áo Ngũ thân tay chèn</li>
+                                <li>- 1 khăn lượn (cho nữ)/khăn xếp (cho nam)</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Áo dài cách tân</h3>
+                            <p class="price">Đồng giá<br>120.000đ</p>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Áo Ngũ thân<br>tay chèn</h3>
+                            <p class="price">Giá 100.000đ</p>
+                            <ul>
+                                <li>- 1 quần trắng/đen tròn</li>
+                                <li>- 1 áo Ngũ thân tay chèn</li>
+                                <li>- 1 khăn lượn (cho nữ)/khăn xếp (cho nam)</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Áo Tấc</h3>
+                            <p class="price">Giá 150.000đ</p>
+                            <ul>
+                                <li>- 1 quần trắng/đen tròn</li>
+                                <li>- 1 áo Ngũ thân tay thụng (Áo Tấc)</li>
+                                <li>- 1 khăn lượn (cho nữ)/khăn xếp (cho nam)</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Áo Chàm</h3>
+                            <p class="price">Giá 100.000đ</p>
+                            <ul>
+                                <li>- 1 quần chàm ống rộng</li>
+                                <li>- 1 áo chàm cổ tàu dáng suông</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Phụ kiện</h3>
+                            <p class="price">Giá thuê<br>30.000-50.000đ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rules-section">
+                <div class="text-content">
+                    <h2>Quy Định Thuê Trang Phục</h2>
+                    
+                    <div class="rules-container">
+                        <div class="rule-group">
+                            <h3>Thời Gian & Đặt Cọc</h3>
+                            <ul>
+                                <li>Thời gian thuê: 24 giờ (1 ngày)</li>
+                                <li>Đặt cọc: CMND/CCCD + 50% giá trị trang phục</li>
+                                <li>Đặt lịch trước tối thiểu 1-2 ngày</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-group">
+                            <h3>Quy Định Bảo Quản</h3>
+                            <ul>
+                                <li>Không tự ý giặt trang phục</li>
+                                <li>Tránh làm bẩn, rách, hư hỏng</li>
+                                <li>Không hút thuốc khi mặc trang phục</li>
+                                <li>Bảo quản trang phục trong túi đựng được cung cấp</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-group">
+                            <h3>Phí Phát Sinh</h3>
+                            <ul>
+                                <li>Trả muộn: 50% giá thuê/ngày</li>
+                                <li>Làm bẩn nhẹ: 30% giá trị trang phục</li>
+                                <li>Hư hỏng nặng: 80-100% giá trị trang phục</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-group">
+                            <h3>Dịch Vụ Đi Kèm</h3>
+                            <ul>
+                                <li>Tư vấn phối đồ miễn phí</li>
+                                <li>Chỉnh sửa size nhỏ miễn phí</li>
+                                <li>Hỗ trợ mặc trang phục tại cửa hàng</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h2>Thông Tin Liên Hệ</h2>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>54 Chùa Láng, Láng Thượng, Đống Đa, Hà Nội 11512</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>Hotline: 0386992402</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Mở cửa: 08:00 – 19:00 hàng ngày</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: silentelegance@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook: <a href="https://facebook.com/silentelegance" target="_blank">Facebook.com/silentelegance</a></span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="cta-button">Liên Hệ Ngay</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Địa Chỉ</h3>
+                <p>54 Chùa Láng, Láng Thượng</p>
+                <p>Đống Đa, Hà Nội, 11512</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kết Nối</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/silentelegance" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <p>Hotline: 038.699.2402</p>
+                <p>Email: silentelegance@gmail.com</p>
+                <p>Giờ mở cửa: 08:00 - 19:00 hàng ngày</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-divider"></div>
+            <p>&copy; 2025 Silent Elegance | Designed by <a href="https://liminova.net" target="_blank" style="color: inherit; text-decoration: underline;">Liminova</a></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html> 
