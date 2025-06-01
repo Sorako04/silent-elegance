@@ -80,4 +80,4 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-Created by [Your Name] 
+Created by [Liminova] 
